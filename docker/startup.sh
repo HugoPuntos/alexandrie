@@ -51,9 +51,6 @@ fi
 # if the crate-storage directory doesn't exist, make it
 mkdir -p appdata/crate-storage
 
-# make the appropriate database directory
-mkdir -p appdata/${DATABASE}
-
 # for postgres and mysql, on the first run wait for the database to come up,
 # then use diesel to set up the database
 if [ "${DATABASE}" = "mysql" ] || [ "${DATABASE}" = "postgres" ]; then
